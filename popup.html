@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyOpenRouter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button id="btn-gerar" class="tab-btn active" data-tab="gerar">Gerar</button>
+            <button id="btn-config" class="tab-btn" data-tab="configuracoes">Configurações</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tab-gerar" class="tab-content active">
+            <p><label for="prompt-input">Sua solicitação:</label></p>
+            <textarea id="prompt-input" rows="4" placeholder="Ex: Crie 3 slogans para uma cafeteria..."></textarea>
+            
+            <button id="generate-btn">Enviar</button>
+
+            <br>
+            
+            <p><label for="response-output">Resposta da IA:</label></p>
+            <div id="response-output" class="output-area"></div>
+            
+            <button id="insert-btn" disabled>Inserir no Campo Ativo</button>
+        </section>
+
+        <section id="tab-configuracoes" class="tab-content">
+            <h2>Configurações do OpenRouter.ai</h2>
+            
+            <p><label for="api-key-input">
+                Chave da API (OpenRouter)
+                <small>(<a href="https://openrouter.ai/settings/keys" target="_blank">gerar chave de API</a>)</small>
+            </label></p>
+            <input type="password" id="api-key-input" placeholder="sk-or-...">
+            
+            <br>
+            
+            <p><label for="model-input">
+                Modelo de IA 
+                <small>(<a href="https://openrouter.ai/models" target="_blank">ver modelos</a>)</small>
+            </label></p>
+            <input type="text" id="model-input" placeholder="google/gemini-pro-1.5-flash" value="deepseek/deepseek-r1-0528:free">
+            
+            <button id="save-settings-btn">Salvar</button>
+
+            <br>
+            
+            <p id="save-status"></p>
+            <br>
+            
+            <article>
+                <h4>Instruções de uso:</h4>
+                <p>Para utilizar o EasyOpenRouter, siga as instruções abaixo:</p>
+                <ul>
+                    <li>Na aba "Configurações", insira sua chave da API e selecione o modelo desejado.</li>
+                    <li>Clique em "Salvar" para aplicar as configurações.</li>
+                    <li>Na aba "Gerar", digite sua solicitação.</li>
+                    <li>Clique em "Enviar" para obter a resposta da IA.</li>
+                    <li>Use o botão "Inserir no Campo Ativo" para adicionar a resposta ao campo de entrada ativo do navegador.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <script src="popup.js" defer></script>
+</body>
+</html>
