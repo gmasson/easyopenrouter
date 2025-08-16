@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "EasyOpenRouter",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Usa diversos modelos de IA via OpenRouter.ai para gerar texto em qualquer site.",
   "permissions": [
     "storage",
